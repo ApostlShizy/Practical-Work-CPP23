@@ -7,7 +7,7 @@
 #define DAY_5 "Friday"
 #define DAY_6 "Saturday"
 #define DAY_7 "Sunday"
-#define CONCAT(day,number) day ## _ ## number
+#define CONCAT(number) DAY_ ## number
 
 
 int main() {
@@ -15,25 +15,25 @@ int main() {
     std::cout << "Enter day of week (1-7): ";
     std::cin >> num;
     if (num == 1) {
-        std::cout << "\nIts: " << CONCAT(DAY, 1) << std::endl;
+        std::cout << "\nIts: " << CONCAT(1) << std::endl;
     }
     else if (num == 2) {
-        std::cout << "\nIts: " << CONCAT(DAY, 2) << std::endl;
+        std::cout << "\nIts: " << CONCAT(2) << std::endl;
     }
     else if (num == 3) {
-        std::cout << "\nIts: " << CONCAT(DAY, 3) << std::endl;
+        std::cout << "\nIts: " << CONCAT(3) << std::endl;
     }
     else if (num == 4) {
-        std::cout << "\nIts: " << CONCAT(DAY, 4) << std::endl;
+        std::cout << "\nIts: " << CONCAT(4) << std::endl;
     }
     else if (num == 5) {
-        std::cout << "\nIts: " << CONCAT(DAY, 5) << std::endl;
+        std::cout << "\nIts: " << CONCAT(5) << std::endl;
     }
     else if (num == 6) {
-        std::cout << "\nIts: " << CONCAT(DAY, 6) << std::endl;
+        std::cout << "\nIts: " << CONCAT(6) << std::endl;
     }
     else if (num == 7) {
-        std::cout << "\nIts: " << CONCAT(DAY, 7) << std::endl;
+        std::cout << "\nIts: " << CONCAT(7) << std::endl;
     }
     else {
         std::cout << "\nWrong number !";

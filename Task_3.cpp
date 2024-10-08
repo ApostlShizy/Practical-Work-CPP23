@@ -4,14 +4,23 @@
 #define FILL(func,train) func(train)
 
 void count(int train[]) {
-    for (int i = 0; i < 10; ++i) {
-        if (train[i] == 0) {
-            std::cout << "\nWagon " << i << " empty.";
-        }
-        else if (train[i] > 20) {
+    int total = 0;
+    for (int i = 0; i < 10; ++i) {        
+        if (train[i] > 20) {
             std::cout << "\nWagon " << i << " overcrowded!";
+            total += train[i];  
+            train[i] = -1;
         }
     }
+    for(int i = 0; i < 10; ++i){
+        if(train[i] == 0) {
+            std::cout<<"\nWagon " << i << " empty.";
+        }
+        if(train[i] > 0) {
+            total += train[i];
+        }
+    }
+    std::cout<<"\nCount off.Total count: "<< total;
 }
 
 void fill(int train[]) {
